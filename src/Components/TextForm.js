@@ -41,17 +41,6 @@ export default function TextForm(props) {
     setText(newText.join(" "));
   };
 
-  const handleSentenceClick = () => {
-    let newText = text.split("\n");
-    newText = newText.map((line) => {
-      line = line.trim();
-      if (line.length > 0) {
-        return line.charAt(0).toUpperCase() + line.slice(1);
-      }
-      return line;
-    });
-    setText(newText.join("\n"));
-  };
 
   // Credits: Coding Wala
   const handleExtraSpaces = () => {
@@ -100,9 +89,6 @@ export default function TextForm(props) {
         </button>
         <button className="btn btn-primary mx-1" onClick={handleWordClick}>
           WordCase
-        </button>
-        <button className="btn btn-primary mx-1" onClick={handleSentenceClick}>
-          Sentence Case
         </button>
       </div>
       <div
